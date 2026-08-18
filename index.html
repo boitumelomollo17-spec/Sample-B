@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Next Step — University Applications, South Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E1B33;
+    --navy-soft:#182B4D;
+    --parchment:#F5EFE0;
+    --parchment-dim:#EDE5D0;
+    --gold:#C9973E;
+    --gold-deep:#A87A28;
+    --teal:#14555A;
+    --flag:#B84632;
+    --ink:#181410;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:'Public Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace; letter-spacing:0.02em;}
+  a{color:inherit;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:40;
+    background:rgba(245,239,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(14,27,51,0.12);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;}
+  .logo-mark{
+    width:30px;height:30px;border-radius:50%;
+    background:conic-gradient(from 220deg, var(--gold), var(--teal), var(--navy));
+    display:flex;align-items:center;justify-content:center;
+    color:var(--parchment);font-family:'Fraunces',serif;font-size:14px;font-weight:600;
+  }
+  nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;font-size:14px;font-weight:500;}
+  nav a.navlink{text-decoration:none;opacity:0.75;transition:opacity .15s;}
+  nav a.navlink:hover{opacity:1;}
+
+  /* HERO */
+  header.hero{padding:72px 0 40px;}
+  .eyebrow{
+    display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;
+    letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);
+    border:1px solid var(--teal);border-radius:99px;padding:4px 12px;margin-bottom:18px;
+  }
+  h1.display{font-size:clamp(34px,5.4vw,58px);line-height:1.03;font-weight:600;max-width:820px;margin:0 0 18px;}
+  h1.display em{font-style:italic;color:var(--gold-deep);}
+  .hero-sub{font-size:17px;max-width:560px;line-height:1.55;opacity:0.82;margin-bottom:36px;}
+
+  /* FORK / ROUTE CARDS */
+  .fork{position:relative;padding-top:8px;}
+  .fork-line{
+    display:flex;align-items:center;gap:10px;margin-bottom:22px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--navy);opacity:0.6;
+  }
+  .fork-line .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  .fork-line .line{flex:1;height:1px;background:linear-gradient(to right, var(--gold), transparent);}
+  .routes{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media (max-width:720px){.routes{grid-template-columns:1fr;}}
+  .route-card{
+    border-radius:18px;padding:28px;position:relative;overflow:hidden;
+    border:1px solid rgba(14,27,51,0.1);
+    transition:transform .18s ease, box-shadow .18s ease;
+    cursor:pointer;
+  }
+  .route-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(14,27,51,0.14);}
+  .route-card.self{background:var(--parchment-dim);}
+  .route-step{font-family:'IBM Plex Mono',monospace;font-size:12px;opacity:0.6;margin-bottom:10px;}
+  .route-card h3{font-size:24px;margin:0 0 8px;font-weight:600;}
+  .route-card p{font-size:14.5px;line-height:1.5;opacity:0.85;margin:0 0 20px;}
+  .route-card .cta{
+    display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;
+    text-decoration:none;color:var(--teal);
+  }
+
+  /* SECTIONS */
+  section{padding:68px 0;}
+  .section-head{margin-bottom:38px;max-width:640px;}
+  .section-head .eyebrow{margin-bottom:10px;}
+  .section-head h2{font-size:clamp(26px,3.4vw,36px);font-weight:600;margin:0 0 10px;}
+  .section-head p{opacity:0.75;line-height:1.55;font-size:15px;margin:0;}
+
+  /* UNI GRID */
+  .uni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media (max-width:860px){.uni-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.uni-grid{grid-template-columns:1fr;}}
+  .uni-card{
+    background:#fff;border:1px solid rgba(14,27,51,0.1);border-radius:14px;
+    padding:18px 20px;text-decoration:none;color:var(--ink);
+    display:flex;flex-direction:column;gap:6px;transition:border-color .15s, transform .15s;
+  }
+  .uni-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .uni-card .name{font-family:'Fraunces',serif;font-weight:600;font-size:16px;}
+  .uni-card .tag{font-size:12.5px;opacity:0.65;line-height:1.4;}
+  .uni-card .go{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--teal);margin-top:4px;}
+  .cao-banner{
+    background:var(--teal);color:var(--parchment);border-radius:14px;padding:20px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap;
+  }
+  .cao-banner a{color:var(--gold);font-weight:600;text-decoration:none;}
+  .disclaimer{font-size:12px;opacity:0.55;margin-top:18px;line-height:1.5;}
+
+  /* APS TOOL */
+  .aps-tool{background:#fff;border:1px solid rgba(14,27,51,0.1);border-radius:20px;padding:32px;}
+  @media (max-width:640px){.aps-tool{padding:20px;}}
+  .aps-label{display:block;font-family:'IBM Plex Mono',monospace;font-size:12.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--teal);margin-bottom:10px;}
+  .aps-select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(14,27,51,0.2);font-family:'Public Sans';font-size:14.5px;background:var(--parchment-dim);margin-bottom:6px;}
+  .aps-note{font-size:12.5px;opacity:0.65;line-height:1.5;margin:0;}
+  .aps-step{margin-bottom:26px;}
+  .subject-row{display:grid;grid-template-columns:1.4fr 0.8fr auto;gap:10px;margin-bottom:10px;align-items:center;}
+  @media (max-width:560px){.subject-row{grid-template-columns:1fr;}}
+  .subject-row select, .subject-row input{
+    padding:10px 12px;border-radius:8px;border:1px solid rgba(14,27,51,0.18);font-family:'Public Sans';font-size:13.5px;background:var(--parchment-dim);
+  }
+  .subject-row .remove-subject{background:none;border:none;color:var(--flag);cursor:pointer;font-size:13px;font-weight:600;justify-self:start;}
+  .aps-add-btn{background:none;border:1px dashed var(--teal);color:var(--teal);padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;}
+  .aps-calc-btn{background:var(--navy);color:var(--gold);border:none;padding:14px 24px;border-radius:10px;font-weight:700;font-size:14.5px;cursor:pointer;width:100%;}
+  .aps-result{margin-top:24px;background:var(--navy);color:var(--parchment);border-radius:16px;padding:24px;}
+  .aps-result .score{font-family:'Fraunces',serif;font-size:40px;color:var(--gold);font-weight:600;}
+  .aps-result .score span{font-size:16px;font-family:'Public Sans';opacity:0.7;}
+  .aps-result .breakdown{margin-top:14px;font-size:13px;font-family:'IBM Plex Mono',monospace;line-height:1.9;opacity:0.85;}
+  .aps-result .reco{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.15);font-size:14px;line-height:1.6;}
+  .aps-result .estimate-flag{display:inline-block;background:var(--flag);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 10px;border-radius:99px;margin-bottom:12px;}
+
+  /* VERIFY */
+  .verify-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
+  @media (max-width:820px){.verify-grid{grid-template-columns:1fr;}}
+  .verify-card{background:#fff;border:1px solid rgba(14,27,51,0.1);border-radius:16px;padding:22px;}
+  .verify-card.official{border:1.5px solid var(--gold);background:var(--parchment-dim);}
+  .verify-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;color:var(--teal);letter-spacing:0.06em;margin-bottom:10px;}
+  .verify-card h3{font-size:16.5px;margin:0 0 8px;font-weight:600;}
+  .verify-card p{font-size:13.5px;line-height:1.55;opacity:0.8;margin:0 0 14px;}
+  .verify-link{color:var(--gold-deep);font-weight:700;font-size:13.5px;text-decoration:none;}
+  .pdf-frame-wrap{margin-top:14px;}
+  .pdf-frame{width:100%;height:72vh;min-height:420px;border:1px solid rgba(14,27,51,0.15);border-radius:12px;background:#e9e4d4;}
+  .pdf-fallback-note{font-size:12px;opacity:0.6;margin-top:8px;line-height:1.5;}
+  .redflags{background:var(--navy);border-radius:16px;padding:24px 28px;}
+  .redflags ul{margin:0;padding-left:20px;color:var(--parchment);opacity:0.85;}
+  .redflags li{font-size:13.5px;line-height:1.7;margin-bottom:4px;}
+
+  footer{padding:40px 0;text-align:center;font-size:12.5px;opacity:0.6;}
+  footer .admin-link{cursor:pointer;text-decoration:underline;opacity:0.5;}
+
+  /* CHAT BUBBLE */
+  #chat-toggle{
+    position:fixed;bottom:22px;right:22px;z-index:60;
+    width:58px;height:58px;border-radius:50%;background:var(--navy);color:var(--parchment);
+    border:none;cursor:pointer;box-shadow:0 8px 22px rgba(14,27,51,0.35);
+    display:flex;align-items:center;justify-content:center;font-size:24px;
+  }
+  #chat-panel{
+    position:fixed;bottom:92px;right:22px;z-index:60;width:min(340px,92vw);
+    background:#fff;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,0.25);
+    display:none;flex-direction:column;overflow:hidden;border:1px solid rgba(14,27,51,0.1);
+  }
+  #chat-panel.open{display:flex;}
+  .chat-head{background:var(--navy);color:var(--parchment);padding:14px 16px;font-weight:600;font-size:14px;display:flex;justify-content:space-between;align-items:center;}
+  .chat-head .sub{font-weight:400;font-size:11.5px;opacity:0.7;font-family:'IBM Plex Mono',monospace;}
+  .chat-setup{padding:16px;display:flex;flex-direction:column;gap:10px;}
+  .chat-setup input{padding:10px 12px;border-radius:8px;border:1px solid #ddd;font-size:13px;font-family:'Public Sans';}
+  .chat-setup button{background:var(--gold);color:var(--navy);border:none;padding:10px;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px;}
+  .chat-body{flex:1;max-height:320px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px;background:var(--parchment);}
+  .msg{max-width:82%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.4;}
+  .msg.visitor{align-self:flex-end;background:var(--gold);color:var(--navy);border-bottom-right-radius:3px;}
+  .msg.boitumelo{align-self:flex-start;background:var(--navy);color:var(--parchment);border-bottom-left-radius:3px;}
+  .msg .meta{display:block;font-size:9.5px;opacity:0.6;margin-top:3px;font-family:'IBM Plex Mono',monospace;}
+  .chat-input-row{display:flex;border-top:1px solid #eee;}
+  .chat-input-row input{flex:1;border:none;padding:12px 14px;font-size:13.5px;font-family:'Public Sans';outline:none;}
+  .chat-input-row button{border:none;background:var(--navy);color:var(--gold);padding:0 18px;cursor:pointer;font-weight:700;}
+  .chat-empty{font-size:12.5px;opacity:0.55;text-align:center;padding:20px 10px;}
+
+  /* ADMIN */
+  #admin-panel{
+    position:fixed;inset:0;background:var(--navy);z-index:80;display:none;
+    color:var(--parchment);overflow-y:auto;
+  }
+  #admin-panel.open{display:block;}
+  .admin-wrap{max-width:900px;margin:0 auto;padding:40px 24px;}
+  .admin-gate{max-width:340px;margin:120px auto;text-align:center;}
+  .admin-gate input{width:100%;padding:12px;border-radius:8px;border:none;margin:14px 0;font-family:'IBM Plex Mono',monospace;}
+  .admin-gate button{background:var(--gold);color:var(--navy);border:none;padding:12px 20px;border-radius:8px;font-weight:700;cursor:pointer;}
+  .admin-close{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--parchment);font-size:22px;cursor:pointer;}
+  .admin-tabs{display:flex;gap:10px;margin-bottom:24px;}
+  .admin-tab{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:8px 16px;border-radius:99px;font-size:13px;cursor:pointer;color:var(--parchment);}
+  .admin-tab.active{background:var(--gold);color:var(--navy);font-weight:700;border-color:var(--gold);}
+  .admin-list-item{background:rgba(255,255,255,0.06);border-radius:12px;padding:16px;margin-bottom:12px;cursor:pointer;}
+  .admin-list-item .top{display:flex;justify-content:space-between;font-size:13px;opacity:0.7;font-family:'IBM Plex Mono',monospace;}
+  .admin-list-item .preview{font-size:14px;margin-top:6px;opacity:0.9;}
+  .admin-chat-view{background:rgba(255,255,255,0.06);border-radius:14px;padding:16px;}
+  .admin-chat-view .chat-body{max-height:280px;background:transparent;}
+  .admin-reply-row{display:flex;gap:8px;margin-top:10px;}
+  .admin-reply-row input{flex:1;padding:10px 12px;border-radius:8px;border:none;font-family:'Public Sans';}
+  .admin-reply-row button{background:var(--gold);border:none;color:var(--navy);padding:0 16px;border-radius:8px;font-weight:700;cursor:pointer;}
+  .app-detail{font-size:13.5px;line-height:1.8;}
+  .app-detail b{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><span class="logo-mark">BM</span> The Next Step</div>
+    <ul>
+      <li><a class="navlink" href="#self">Self-Apply</a></li>
+      <li><a class="navlink" href="#study">What to Study</a></li>
+      <li><a class="navlink" href="#aps">Calculate my APS</a></li>
+      <li><a class="navlink" href="#prospectus">Prospectus</a></li>
+      <li><a class="navlink" href="#verify">Verify a University</a></li>
+      <li><a class="navlink" href="closing-dates.html">Closing Dates</a></li>
+      <li><a class="navlink" href="#nsfas">NSFAS</a></li>
+      <li><a class="navlink" href="bursaries.html">Bursaries</a></li>
+      <li><a class="navlink" href="tvet.html">Looking into TVET colleges?</a></li>
+      <li><a class="navlink" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">University Applications · South Africa</span>
+    <h1 class="display">Apply to university,<br>with <em>no guesswork.</em></h1>
+    <p class="hero-sub">Direct links to every SA university's official application portal, a calculator that scores your matric marks the way each university actually does, and a way to check a private college is legit — all free.</p>
+
+    <div class="fork">
+      <div class="fork-line"><span class="dot"></span><span>start here</span><span class="line"></span></div>
+      <div class="routes">
+        <a href="#self" class="route-card self">
+          <div class="route-step">STEP 01</div>
+          <h3>Browse universities</h3>
+          <p>Direct, official links to every South African public university, plus well-known private institutions. Free, always.</p>
+          <span class="cta">See the directory →</span>
+        </a>
+        <a href="#aps" class="route-card self">
+          <div class="route-step">STEP 02</div>
+          <h3>Calculate my APS</h3>
+          <p>Every university scores your matric marks differently. Pick yours and get an honest estimate, not a generic guess.</p>
+          <span class="cta">Calculate my score →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="self">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Self-Apply</span>
+      <h2>Apply directly, no middleman.</h2>
+      <p>Official application portals for South Africa's public universities. Bookmark this page — you'll be back a few times before results season.</p>
+    </div>
+
+    <div class="cao-banner">
+      <div>
+        <strong>Applying in KwaZulu-Natal?</strong> UKZN, DUT, MUT and UNIZULU all share one form via the Central Applications Office.
+      </div>
+      <a href="https://www.cao.ac.za" target="_blank" rel="noopener">Apply via CAO →</a>
+    </div>
+
+    <div class="uni-grid" id="uni-grid"></div>
+    <p class="disclaimer">Links go to each university's own website. Application fees, closing dates and course availability are set by the institutions and change often — always confirm on the official page before paying anything.</p>
+
+    <div class="section-head" style="margin-top:52px;">
+      <span class="eyebrow">Private institutions</span>
+      <h2 style="font-size:26px;">Studying privately? Check registration first.</h2>
+      <p>These are among South Africa's better-known private higher education providers. Before you pay any application fee anywhere private, confirm the institution on the <a href="#verify" style="color:var(--teal);font-weight:600;">Verify a University</a> tab below — private higher education has real, legitimate players and a lot of scams wearing the same "campus" language.</p>
+    </div>
+    <div class="uni-grid" id="private-grid"></div>
+    <p class="disclaimer">This is not an endorsement — it's a starting list of well-known brands. Registration status can change, and a well-known name is not proof of registration. Always check the DHET register yourself.</p>
+
+    <div class="cao-banner" style="margin-top:24px;">
+      <div>
+        <strong>Looking into TVET colleges?</strong> Practical, hands-on training — a real alternative to university, not a backup. See what TVET is, how it works, and all 50 public colleges by province.
+      </div>
+      <a href="tvet.html">Explore TVET colleges →</a>
+    </div>
+  </div>
+</section>
+
+<section id="study">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Start here</span>
+      <h2>What do you want to study?</h2>
+      <p>Pick a field, and see which South African universities offer it. This is a starting point, not a full course catalogue — always confirm the exact programme name and requirements on the university's own site.</p>
+    </div>
+    <div class="aps-tool">
+      <label class="aps-label">Field of study</label>
+      <select id="study-field-select" class="aps-select">
+        <option value="">Select a field…</option>
+      </select>
+      <div id="study-results" style="margin-top:20px;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="aps">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Free tool</span>
+      <h2>Calculate my APS score.</h2>
+      <p>Every South African university scores your matric marks differently — the same results can be 33/42 at one university and 430/600 at another. Pick your university, enter your marks, and get that university's own version of your score.</p>
+    </div>
+
+    <div class="aps-tool">
+      <div class="aps-step" id="aps-step-uni">
+        <label class="aps-label">Step 1 — Which university?</label>
+        <select id="aps-uni-select" class="aps-select">
+          <option value="">Select a university…</option>
+        </select>
+        <p class="aps-note" id="aps-uni-note"></p>
+      </div>
+
+      <div class="aps-step" id="aps-step-subjects" style="display:none;">
+        <label class="aps-label">Step 2 — Your subjects &amp; marks</label>
+        <div id="aps-subject-rows"></div>
+        <button type="button" id="aps-add-subject" class="aps-add-btn">+ Add subject</button>
+      </div>
+
+      <div class="aps-step" id="aps-step-calc" style="display:none;">
+        <button type="button" id="aps-calculate" class="aps-calc-btn">Calculate my score</button>
+      </div>
+
+      <div id="aps-result" class="aps-result" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="prospectus">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Read before you apply</span>
+      <h2>See a university's prospectus.</h2>
+      <p>Where I've verified a direct, current link, it goes straight to the PDF or prospectus page. For the rest, it goes to the university's admissions page so you can find it yourself. Prospectus links move around every intake, so this list needs a quick check each January — ask me to refresh it any time.</p>
+    </div>
+    <div class="aps-tool">
+      <label class="aps-label">Choose a university</label>
+      <select id="prospectus-select" class="aps-select">
+        <option value="">Select a university…</option>
+      </select>
+      <div id="prospectus-result" style="margin-top:16px;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="verify">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Before you pay anyone</span>
+      <h2>Is this university actually registered?</h2>
+      <p>South Africa has 26 public universities — all legitimate by default — plus roughly 145 registered private higher education institutions. Everything else operating as a "university" or "college" outside those lists is illegal, and a qualification from one has no standing.</p>
+    </div>
+
+    <div class="verify-grid">
+      <div class="verify-card official">
+        <div class="verify-tag">Official source</div>
+        <h3>DHET Register of Private Higher Education Institutions</h3>
+        <p>The Department of Higher Education and Training publishes the full, current list of every legally registered private institution — updated regularly. Search it (Ctrl+F) for the exact name on your acceptance letter before you pay anything.</p>
+        <a class="verify-link" href="https://www.dhet.gov.za/Registers_DocLib/Annexure%20A%20Register%20%20Private%20Higher%20Education%20Institutions%2006%20July%202026.pdf" target="_blank" rel="noopener">Open the official DHET register (PDF) →</a>
+      </div>
+      <div class="verify-card">
+        <div class="verify-tag">Also check</div>
+        <h3>SAQA — is the qualification on the NQF?</h3>
+        <p>Registration alone isn't enough — the specific qualification also needs to sit on the National Qualifications Framework. If a college can't give you a SAQA ID for your exact course, that's a red flag on its own.</p>
+        <a class="verify-link" href="https://allqs.saqa.org.za/search.php" target="_blank" rel="noopener">Search the SAQA qualifications database →</a>
+      </div>
+      <div class="verify-card">
+        <div class="verify-tag">Report it</div>
+        <h3>Suspect a bogus college?</h3>
+        <p>DHET investigates unregistered institutions directly. If a "college" can't produce a registration certificate, or its registration number doesn't match the official register, report it rather than paying.</p>
+        <a class="verify-link" href="mailto:PCComplaints1@dhet.gov.za">Email DHET: PCComplaints1@dhet.gov.za →</a>
+      </div>
+    </div>
+
+    <div class="redflags">
+      <h3 style="margin-top:0;color:var(--parchment);font-size:18px;">Signs a "university" or college isn't legitimate</h3>
+      <ul>
+        <li>It can't show you a current DHET registration certificate, or the registration number doesn't match the official register.</li>
+        <li>It pressures you to pay registration or "seat reservation" fees before you've verified anything.</li>
+        <li>It can't give you a SAQA ID for the specific qualification you'd be studying.</li>
+        <li>Its name closely mimics a real, well-known university or college with a slightly different spelling.</li>
+        <li>All communication happens over WhatsApp or private email, with no verifiable physical campus.</li>
+      </ul>
+    </div>
+    <p class="disclaimer">This page links to official government and SAQA sources rather than listing institutions ourselves — registration status changes often, and the official register is always the accurate, current source. Always verify directly before enrolling or paying.</p>
+  </div>
+</section>
+
+<section id="nsfas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Funding</span>
+      <h2>What is NSFAS?</h2>
+      <p>The National Student Financial Aid Scheme is the South African government's main funding scheme for students who can't afford university or TVET college on their own. If money is the thing standing between you and studying, this is where to start.</p>
+    </div>
+
+    <div class="verify-grid">
+      <div class="verify-card official">
+        <div class="verify-tag">Who qualifies</div>
+        <h3>The income threshold</h3>
+        <p>NSFAS funds South African citizens and permanent residents with a combined household income of R350,000 or less a year — rising to R600,000 for students living with a disability. SASSA grant recipients qualify automatically without a separate income check.</p>
+      </div>
+      <div class="verify-card">
+        <div class="verify-tag">What it covers</div>
+        <h3>Tuition and living costs</h3>
+        <p>Full tuition, plus allowances for accommodation, transport, meals, and books — paid directly to your bank account. It applies equally to public universities and public TVET colleges.</p>
+      </div>
+      <div class="verify-card">
+        <div class="verify-tag">Good to know</div>
+        <h3>Timing and staying funded</h3>
+        <p>Applications typically open around September for the following academic year and close in January — apply as early as you can, since documents (certified ID copies, proof of income) are the most common cause of delays. Funding covers your minimum study duration plus two extra years, so passing your subjects matters for staying funded.</p>
+      </div>
+    </div>
+
+    <div class="cao-banner" style="background:var(--navy);">
+      <div>
+        <strong>Apply directly through NSFAS</strong> — this isn't something any third party, including this site, can apply on your behalf for.
+      </div>
+      <a href="https://www.nsfas.org.za" target="_blank" rel="noopener">Go to nsfas.org.za →</a>
+    </div>
+    <p class="disclaimer">NSFAS funding is separate from applying to a university or TVET college — you need to do both. An NSFAS approval doesn't guarantee a study place, and a study place doesn't guarantee NSFAS funding.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap" style="text-align:center;">
+    <div class="section-head" style="margin:0 auto;">
+      <span class="eyebrow">Questions?</span>
+      <h2>Use the chat bubble, bottom right.</h2>
+      <p>Ask me anything about a course, a deadline, or which route makes sense for you — I read every message.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Built by Tswelopele Boitumelo Mollo & Prof Nicholus Tumelo Mollo · The Next Step, South Africa · <span class="admin-link" id="admin-open">Admin</span>
+  </div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<button id="chat-toggle">💬</button>
+<div id="chat-panel">
+  <div class="chat-head">
+    <div>Chat with Boitumelo<div class="sub" id="chat-status">usually replies same day</div></div>
+    <button id="chat-close" style="background:none;border:none;color:inherit;font-size:18px;cursor:pointer;">×</button>
+  </div>
+  <div id="chat-setup" class="chat-setup">
+    <input type="text" id="chat-name" placeholder="Your name">
+    <input type="text" id="chat-phone" placeholder="WhatsApp number or email">
+    <button id="chat-start">Start chat</button>
+    <div style="font-size:11px;opacity:0.55;">Used only to find your conversation if you come back.</div>
+  </div>
+  <div id="chat-live" style="display:none;flex-direction:column;flex:1;">
+    <div class="chat-body" id="chat-body"></div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Type a message…">
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+  <div class="admin-wrap" style="position:relative;">
+    <button class="admin-close" id="admin-close">×</button>
+    <div id="admin-gate" class="admin-gate">
+      <h2 style="color:var(--gold);">Admin login</h2>
+      <p style="opacity:0.7;font-size:13.5px;">Sign in with the admin account you created in Firebase.</p>
+      <input type="email" id="admin-email" placeholder="Admin email" autocomplete="username">
+      <input type="password" id="admin-pass" placeholder="Password" autocomplete="current-password">
+      <button id="admin-login">Sign in</button>
+      <div id="admin-gate-msg" style="color:var(--flag);font-size:12.5px;margin-top:8px;"></div>
+    </div>
+    <div id="admin-content" style="display:none;">
+      <h2 style="color:var(--gold);margin-bottom:4px;">Admin</h2>
+      <p style="opacity:0.6;font-size:13px;margin-bottom:20px;">Live chats and help-apply requests, stored for this site.</p>
+      <div class="admin-tabs">
+        <div class="admin-tab active" data-tab="chats">Chats</div>
+        <div class="admin-tab" data-tab="requests">Requests</div>
+      </div>
+      <div id="admin-chats"></div>
+      <div id="admin-requests" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FIREBASE SETUP — fill in your config below, see comments -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+/*
+  SETUP STEPS — do these once in the Firebase console (console.firebase.google.com):
+  1. Create a project.
+  2. Build > Authentication > Get started > enable "Email/Password".
+  3. In Authentication > Users, click "Add user" — this is YOUR admin login. Copy the "User UID" shown after creating it.
+  4. Build > Firestore Database > Create database (start in production mode, pick a region near South Africa e.g. europe-west or africa-* if offered).
+  5. In Project settings (gear icon) > General > "Your apps" > click the web icon (</>) to register a web app. Copy the firebaseConfig object it gives you and paste it below.
+  6. Paste your admin UID from step 3 into ADMIN_UID below.
+  7. In Firestore > Rules, paste the security rules from the message this code came with, replacing YOUR_ADMIN_UID with the same UID.
+*/
+const firebaseConfig = {
+  apiKey: "AIzaSyAPEYkBnxSCTSRBbQylhNuYfIYLPXz4GpQ",
+  authDomain: "the-next-step-49e89.firebaseapp.com",
+  projectId: "the-next-step-49e89",
+  storageBucket: "the-next-step-49e89.firebasestorage.app",
+  messagingSenderId: "871882420843",
+  appId: "1:871882420843:web:540df45536a1b532c3b72e",
+  measurementId: "G-NY3B0F9VKP"
+};
+const ADMIN_UID = "vdMWdQZ16hO1iRiPW5WWH466rh82";
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+let visitorUid = null;
+auth.onAuthStateChanged(user=>{
+  if(user) visitorUid = user.uid;
+});
+auth.signInAnonymously().catch(e=>console.error('Anonymous sign-in failed — check Firebase config.', e));
+</script>
+
+<script>
+/* ---------- University directory (Route 01) ---------- */
+const universities = [
+  {name:"CAO (KZN Universities)", tag:"UKZN, DUT, MUT, UNIZULU — one form, one fee", url:"https://www.cao.ac.za"},
+  {name:"University of Cape Town", tag:"Applications via UCT online portal", url:"https://www.uct.ac.za/apply"},
+  {name:"University of the Witwatersrand", tag:"Wits Johannesburg online application", url:"https://www.wits.ac.za/study-at-wits/undergraduate-study/how-to-apply/"},
+  {name:"Stellenbosch University", tag:"SU online application system", url:"https://www.sun.ac.za/english/apply"},
+  {name:"University of Pretoria", tag:"UP online application", url:"https://www.up.ac.za/apply"},
+  {name:"University of Johannesburg", tag:"UJ Gauteng, multiple campuses", url:"https://www.uj.ac.za/apply/"},
+  {name:"University of the Free State", tag:"UFS — free application for SA students", url:"https://www.ufs.ac.za/apply"},
+  {name:"University of the Western Cape", tag:"UWC — no application fee for SA students", url:"https://www.uwc.ac.za/study/applications"},
+  {name:"Nelson Mandela University", tag:"NMU, Gqeberha (Eastern Cape)", url:"https://www.mandela.ac.za/Study-at-Mandela/Applications"},
+  {name:"Tshwane University of Technology", tag:"TUT — diplomas & applied degrees", url:"https://www.tut.ac.za/applications"},
+  {name:"Cape Peninsula University of Technology", tag:"CPUT — Engineering, Business, Health", url:"https://www.cput.ac.za/study/apply"},
+  {name:"North-West University", tag:"NWU — Potchefstroom, Mahikeng, Vaal", url:"https://www.nwu.ac.za/how-apply"},
+  {name:"Rhodes University", tag:"Small, research-focused, Makhanda", url:"https://www.ru.ac.za/apply/"},
+  {name:"University of South Africa (UNISA)", tag:"Distance learning, later closing dates", url:"https://www.unisa.ac.za/sites/corporate/default/Apply-for-admission"},
+  {name:"University of KwaZulu-Natal", tag:"UKZN — applies through CAO", url:"https://www.ukzn.ac.za"},
+];
+const grid = document.getElementById('uni-grid');
+universities.forEach(u=>{
+  const a=document.createElement('a');
+  a.href=u.url; a.target="_blank"; a.rel="noopener"; a.className="uni-card";
+  a.innerHTML=`<div class="name">${u.name}</div><div class="tag">${u.tag}</div><div class="go">Apply directly →</div>`;
+  grid.appendChild(a);
+});
+
+const privateInstitutions = [
+  {name:"IIE (Varsity College, Vega, Rosebank, MSA)", tag:"The Independent Institute of Education — largest registered private provider", url:"https://www.iie.ac.za"},
+  {name:"Eduvos", tag:"Multiple SA campuses, IT/Business/Law focus", url:"https://www.eduvos.com"},
+  {name:"STADIO", tag:"Distance and contact learning, several faculties", url:"https://www.stadio.ac.za"},
+  {name:"MANCOSA", tag:"Business & management, distance learning", url:"https://www.mancosa.co.za"},
+  {name:"Milpark Education", tag:"Business, finance, law", url:"https://www.milpark.ac.za"},
+  {name:"Boston City Campus", tag:"Business, IT, multiple campuses nationwide", url:"https://www.boston.co.za"},
+  {name:"Lyceum College", tag:"Distance learning, business & management", url:"https://www.lyceum.co.za"},
+  {name:"AFDA", tag:"Film, TV & performance, Johannesburg/Cape Town/Durban", url:"https://www.afda.co.za"},
+  {name:"Regenesys Business School", tag:"Business & leadership qualifications", url:"https://www.regenesys.net"},
+  {name:"CTU Training Solutions", tag:"IT, business, engineering technology", url:"https://www.ctutraining.co.za"},
+  {name:"Regent Business School", tag:"Business, Durban-based, multiple campuses", url:"https://www.regent.ac.za"},
+  {name:"Richfield", tag:"IT, business & health sciences", url:"https://www.richfield.ac.za"},
+  {name:"Akademia", tag:"Afrikaans-medium, Centurion campus", url:"https://akademia.ac.za"},
+  {name:"AAA School of Advertising", tag:"Advertising, marketing & design, Johannesburg/Cape Town/Durban", url:"https://aaaschool.co.za"},
+];
+const privGrid = document.getElementById('private-grid');
+privateInstitutions.forEach(u=>{
+  const a=document.createElement('a');
+  a.href=u.url; a.target="_blank"; a.rel="noopener"; a.className="uni-card";
+  a.innerHTML=`<div class="name">${u.name}</div><div class="tag">${u.tag}</div><div class="go">Visit site →</div>`;
+  privGrid.appendChild(a);
+});
+
+/* ---------- APS Calculator ---------- */
+const SUBJECTS = [
+  "English Home Language","English First Additional Language",
+  "Afrikaans Home Language","Afrikaans First Additional Language",
+  "isiZulu Home Language","Other Home Language / FAL",
+  "Mathematics","Mathematical Literacy","Life Orientation",
+  "Physical Sciences","Life Sciences","Accounting","Business Studies",
+  "Economics","Geography","History","Information Technology",
+  "Computer Applications Technology","Tourism","Agricultural Sciences",
+  "Consumer Studies","Engineering Graphics & Design","Visual Arts",
+  "Dramatic Arts","Music","Other subject"
+];
+
+const APS_UNIS = [
+  {id:"up", label:"University of Pretoria (UP)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.up.ac.za/apply", fields:["Commerce","Education","Engineering","IT & Computer Science","Health Sciences","Humanities","Law","Natural Sciences","Agriculture","Built Environment"], prospectusUrl:"https://www.up.ac.za/students/faculty-brochures-2027", prospectusYear:2027},
+  {id:"uj", label:"University of Johannesburg (UJ)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.uj.ac.za/apply/", fields:["Arts & Design","Education","Engineering","Built Environment","Health Sciences","Humanities","Law","Commerce","Natural Sciences","IT & Computer Science"], prospectusUrl:"https://www.uj.ac.za/pdf-document/2026-uj-undergraduate-prospectus/", prospectusYear:2027},
+  {id:"dut", label:"Durban University of Technology (DUT)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.cao.ac.za", fields:["Natural Sciences","Arts & Design","Commerce","IT & Computer Science","Engineering","Built Environment","Health Sciences"]},
+  {id:"ufs", label:"University of the Free State (UFS)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.ufs.ac.za/apply", fields:["Commerce","Education","Health Sciences","Humanities","Law","Natural Sciences","Agriculture"], prospectusUrl:"https://www.ufs.ac.za/docs/librariesprovider44/prospectus/ug-prospectus-2027.pdf", prospectusYear:2027},
+  {id:"tut", label:"Tshwane University of Technology (TUT)", type:"tut42", note:"Best 6 subjects, 1–7 points, but any subject below 30% is dropped entirely rather than scored — out of 42.", url:"https://www.tut.ac.za/applications", fields:["Engineering","Built Environment","Humanities","IT & Computer Science","Commerce","Natural Sciences"]},
+  {id:"unisa", label:"University of South Africa (UNISA)", type:"unisa42", note:"Your English mark plus your best 5 other subjects (Life Orientation excluded), 1–7 points, out of 42.", url:"https://www.unisa.ac.za/sites/corporate/default/Apply-for-admission", fields:["Commerce","Agriculture","Education","Humanities","Law","Natural Sciences","Engineering","IT & Computer Science"], prospectusUrl:"https://www.unisa.ac.za/sites/corporate/default/Apply-for-admission/Undergraduate-qualifications/Qualifications/All-qualifications"},
+  {id:"ukzn", label:"University of KwaZulu-Natal (UKZN)", type:"scale48", note:"Stretched scale — 90%+ scores 8 points (not 7). Best 6 subjects, Life Orientation excluded, out of 48.", url:"https://www.ukzn.ac.za", fields:["Agriculture","Engineering","Natural Sciences","Health Sciences","Humanities","Law","Commerce"], prospectusUrl:"https://applications.ukzn.ac.za/prospectus/"},
+  {id:"nwu", label:"North-West University (NWU)", type:"scale48", note:"Stretched scale — 90%+ scores 8 points (not 7). Best 6 subjects, Life Orientation excluded, out of 48.", url:"https://www.nwu.ac.za/how-apply", fields:["Commerce","Education","Engineering","Health Sciences","Humanities","Law","Natural Sciences","Agriculture"], prospectusUrl:"https://studies.nwu.ac.za/undergraduate-studies/fields-study-2027", prospectusYear:2027},
+  {id:"wits", label:"University of the Witwatersrand (Wits)", type:"wits56", note:"Best 7 subjects including Life Orientation (capped at 4 points). English & Maths get +2 bonus points at 60%+, out of 56.", url:"https://www.wits.ac.za/study-at-wits/undergraduate-study/how-to-apply/", fields:["Commerce","Law","Engineering","Built Environment","Health Sciences","Humanities","Natural Sciences","IT & Computer Science"], prospectusUrl:"https://www.wits.ac.za/about-wits/general-prospectus/"},
+  {id:"sun", label:"Stellenbosch University (SU)", type:"percentAgg", note:"Not a points score — your Language of Learning plus best 5 others, averaged as a percentage (Life Orientation excluded).", url:"https://www.sun.ac.za/english/apply", fields:["Agriculture","Humanities","Commerce","Education","Engineering","Law","Health Sciences","Natural Sciences"], prospectusUrl:"https://files.su.ac.za/public/undergraduate-maties/documents/2026-01/su-admissions-booklet-2027.pdf", prospectusYear:2027},
+  {id:"nmu", label:"Nelson Mandela University (NMU)", type:"percentSum600", note:"'Applicant Score' — raw percentages of your best 6 subjects added together, Life Orientation excluded, out of 600.", url:"https://www.mandela.ac.za/Study-at-Mandela/Applications", fields:["Commerce","Education","Engineering","Built Environment","Health Sciences","Humanities","Law","Natural Sciences"], prospectusUrl:"https://publications.mandela.ac.za/publications/media/Store/documents/Prospective%20students/MandelaUni-Undergraduate-Guide.pdf"},
+  {id:"uct", label:"University of Cape Town (UCT)", type:"percentSum600", note:"UCT runs a different Faculty Points Score per faculty (Science doubles Maths & Physical Sciences). This is a simplified estimate — best 6 raw percentages, out of 600.", url:"https://www.uct.ac.za/apply", fields:["Commerce","Engineering","Health Sciences","Humanities","Law","Natural Sciences","Built Environment","IT & Computer Science"], prospectusUrl:"https://uct.ac.za/students/prospective-students/undergraduate-prospectus"},
+  {id:"cput", label:"Cape Peninsula University of Technology (CPUT)", type:"percentSum600", note:"Raw percentages of your best 6 subjects added together, Life Orientation excluded, out of 600.", url:"https://www.cput.ac.za/study/apply", fields:["Natural Sciences","Commerce","Education","Engineering","Health Sciences","IT & Computer Science","Arts & Design"], prospectusUrl:"https://www.cput.ac.za/study-at-cput/undergraduate/prospectus"},
+  {id:"ru", label:"Rhodes University", type:"rhodes", note:"Each subject's percentage ÷ 10 (below 40% scores 0), best 6 subjects excluding Life Orientation (which needs 50%+ separately), out of 60.", url:"https://www.ru.ac.za/apply/", fields:["Commerce","Education","Humanities","Law","Health Sciences","Natural Sciences"], prospectusUrl:"https://www.ru.ac.za/admissiongateway/"},
+  {id:"uwc", label:"University of the Western Cape (UWC)", type:"standard42", note:"UWC weights English & Maths more heavily in its real system. This estimate uses the standard 42-point scale — confirm your exact score with UWC directly.", url:"https://www.uwc.ac.za/study/applications", fields:["Humanities","Health Sciences","Commerce","Education","Law","Natural Sciences","IT & Computer Science"], prospectusUrl:"https://www.uwc.ac.za/files/files/UWC-2027-Application-Guide.pdf", prospectusYear:2027},
+];
+
+/* ---------- What to Study (field finder) ---------- */
+const ALL_FIELDS = ["Agriculture","Arts & Design","Built Environment","Commerce","Education","Engineering","Health Sciences","Humanities","IT & Computer Science","Law","Natural Sciences"];
+const studyFieldSelect = document.getElementById('study-field-select');
+ALL_FIELDS.forEach(f=>{
+  const o=document.createElement('option'); o.value=f; o.textContent=f;
+  studyFieldSelect.appendChild(o);
+});
+studyFieldSelect.addEventListener('change', (e)=>{
+  const field = e.target.value;
+  const resultsEl = document.getElementById('study-results');
+  if(!field){ resultsEl.innerHTML=''; return; }
+  const matches = APS_UNIS.filter(u=>u.fields.includes(field));
+  if(!matches.length){ resultsEl.innerHTML = '<p style="opacity:0.6;">No matches found in this list — try the Self-Apply directory to browse everything.</p>'; return; }
+  resultsEl.innerHTML = `<div class="uni-grid">` + matches.map(u=>`
+    <a href="${u.url}" target="_blank" rel="noopener" class="uni-card">
+      <div class="name">${u.label}</div>
+      <div class="tag">Offers ${field.toLowerCase()} programmes</div>
+      <div class="go">See programmes & requirements →</div>
+    </a>`).join('') + `</div>
+    <p class="disclaimer">This shows which universities broadly offer this field — not every specific qualification. Exact programme names, campuses and requirements vary; confirm on the university's own site.</p>`;
+});
+
+/* ---------- Prospectus finder ---------- */
+const prospectusSelect = document.getElementById('prospectus-select');
+APS_UNIS.forEach(u=>{
+  const o=document.createElement('option'); o.value=u.id; o.textContent=u.label;
+  prospectusSelect.appendChild(o);
+});
+prospectusSelect.addEventListener('change', (e)=>{
+  const uni = APS_UNIS.find(u=>u.id===e.target.value);
+  const resultEl = document.getElementById('prospectus-result');
+  if(!uni){ resultEl.innerHTML=''; return; }
+  const shortName = uni.label.split('(')[0].trim();
+  const isPdf = uni.prospectusUrl && uni.prospectusUrl.toLowerCase().split('?')[0].endsWith('.pdf');
+
+  if(isPdf){
+    const yearNote = uni.prospectusYear
+      ? `<div style="font-size:11px;color:var(--flag);font-weight:600;margin-bottom:8px;">Showing the ${uni.prospectusYear} prospectus — this link should be re-checked each January for the next intake.</div>`
+      : '';
+    resultEl.innerHTML = `
+      <div class="verify-card official">
+        <div class="verify-tag">${uni.label}</div>
+        <h3>Prospectus preview</h3>
+        ${yearNote}
+        <div class="pdf-frame-wrap">
+          <iframe class="pdf-frame" src="${uni.prospectusUrl}" title="${shortName} prospectus"></iframe>
+        </div>
+        <div class="pdf-fallback-note">If the preview above doesn't load (some browsers or networks block embedded PDFs), use the link below instead.</div>
+        <a class="verify-link" href="${uni.prospectusUrl}" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;">Open ${shortName}'s prospectus in a new tab →</a>
+      </div>`;
+  } else if(uni.prospectusUrl){
+    resultEl.innerHTML = `
+      <div class="verify-card official">
+        <div class="verify-tag">${uni.label}</div>
+        <h3>Prospectus page</h3>
+        <p>${shortName}'s prospectus is published on a page rather than a direct PDF, so it can't be previewed inline here — the page itself has the current download link.</p>
+        <a class="verify-link" href="${uni.prospectusUrl}" target="_blank" rel="noopener">Open ${shortName}'s prospectus page →</a>
+      </div>`;
+  } else {
+    resultEl.innerHTML = `
+      <div class="verify-card official">
+        <div class="verify-tag">${uni.label}</div>
+        <h3>Find the official prospectus</h3>
+        <p>This goes to ${shortName}'s own admissions page. Look for a link labelled "Prospectus", "Yearbook", or "Faculty brochures" — usually a downloadable PDF.</p>
+        <a class="verify-link" href="${uni.url}" target="_blank" rel="noopener">Open ${shortName}'s admissions page →</a>
+      </div>`;
+  }
+});
+
+const apsSelect = document.getElementById('aps-uni-select');
+APS_UNIS.forEach(u=>{
+  const o=document.createElement('option'); o.value=u.id; o.textContent=u.label;
+  apsSelect.appendChild(o);
+});
+
+let subjectRowCount = 0;
+function addSubjectRow(defaultSubject, defaultMark){
+  const rows = document.getElementById('aps-subject-rows');
+  const row = document.createElement('div');
+  row.className = 'subject-row';
+  const rowId = 'row-'+(subjectRowCount++);
+  row.dataset.rowId = rowId;
+  const options = SUBJECTS.map(s=>`<option value="${s}" ${s===defaultSubject?'selected':''}>${s}</option>`).join('');
+  row.innerHTML = `
+    <select class="subj-select">${options}</select>
+    <input type="number" class="subj-mark" min="0" max="100" placeholder="Mark %" value="${defaultMark||''}">
+    <button type="button" class="remove-subject">Remove</button>
+  `;
+  row.querySelector('.remove-subject').onclick = ()=> row.remove();
+  rows.appendChild(row);
+}
+
+document.getElementById('aps-uni-select').addEventListener('change', (e)=>{
+  const uni = APS_UNIS.find(u=>u.id===e.target.value);
+  document.getElementById('aps-uni-note').textContent = uni ? uni.note : '';
+  document.getElementById('aps-result').style.display = 'none';
+  if(!uni) return;
+  document.getElementById('aps-step-subjects').style.display = 'block';
+  document.getElementById('aps-step-calc').style.display = 'block';
+  if(document.getElementById('aps-subject-rows').children.length === 0){
+    addSubjectRow("English Home Language", "");
+    addSubjectRow("Mathematics", "");
+    addSubjectRow("Life Orientation", "");
+    addSubjectRow("Other subject", "");
+    addSubjectRow("Other subject", "");
+    addSubjectRow("Other subject", "");
+    addSubjectRow("Other subject", "");
+  }
+});
+document.getElementById('aps-add-subject').onclick = ()=> addSubjectRow("Other subject", "");
+
+function levelOf(pct){
+  if(pct>=80) return 7; if(pct>=70) return 6; if(pct>=60) return 5;
+  if(pct>=50) return 4; if(pct>=40) return 3; if(pct>=30) return 2; return 1;
+}
+function level8Of(pct){
+  if(pct>=90) return 8; if(pct>=80) return 7; if(pct>=70) return 6; if(pct>=60) return 5;
+  if(pct>=50) return 4; if(pct>=40) return 3; if(pct>=30) return 2; return 1;
+}
+const isLO = s => s.name === "Life Orientation";
+const isEnglish = s => s.name.startsWith("English");
+const isMaths = s => s.name === "Mathematics";
+
+function calcAPS(type, subjects){
+  const nonLO = subjects.filter(s=>!isLO(s));
+  let score=0, max=0, breakdown=[];
+
+  if(type==="standard42"){
+    const ranked = nonLO.map(s=>({...s, pts:levelOf(s.mark)})).sort((a,b)=>b.pts-a.pts).slice(0,6);
+    ranked.forEach(s=>breakdown.push(`${s.name}: ${s.mark}% → ${s.pts} pts`));
+    score = ranked.reduce((a,s)=>a+s.pts,0); max=42;
+  } else if(type==="tut42"){
+    const eligible = nonLO.filter(s=>s.mark>=30).map(s=>({...s, pts:levelOf(s.mark)})).sort((a,b)=>b.pts-a.pts).slice(0,6);
+    eligible.forEach(s=>breakdown.push(`${s.name}: ${s.mark}% → ${s.pts} pts`));
+    score = eligible.reduce((a,s)=>a+s.pts,0); max=42;
+    if(eligible.length<6) breakdown.push(`Only ${eligible.length} subjects scored 30%+, so fewer than 6 counted.`);
+  } else if(type==="unisa42"){
+    const eng = nonLO.find(isEnglish);
+    const others = nonLO.filter(s=>!isEnglish(s)).map(s=>({...s, pts:levelOf(s.mark)})).sort((a,b)=>b.pts-a.pts).slice(0,5);
+    if(eng){ const p=levelOf(eng.mark); breakdown.push(`${eng.name}: ${eng.mark}% → ${p} pts (compulsory)`); score+=p; }
+    else breakdown.push("No English subject entered — UNISA requires an English mark.");
+    others.forEach(s=>breakdown.push(`${s.name}: ${s.mark}% → ${s.pts} pts`));
+    score += others.reduce((a,s)=>a+s.pts,0); max=42;
+  } else if(type==="scale48"){
+    const ranked = nonLO.map(s=>({...s, pts:level8Of(s.mark)})).sort((a,b)=>b.pts-a.pts).slice(0,6);
+    ranked.forEach(s=>breakdown.push(`${s.name}: ${s.mark}% → ${s.pts} pts`));
+    score = ranked.reduce((a,s)=>a+s.pts,0); max=48;
+  } else if(type==="wits56"){
+    const adjusted = subjects.map(s=>{
+      let pts = levelOf(s.mark);
+      if(isLO(s)) pts = Math.min(pts,4);
+      if((isEnglish(s)||isMaths(s)) && s.mark>=60) pts += 2;
+      return {...s, pts};
+    }).sort((a,b)=>b.pts-a.pts).slice(0,7);
+    adjusted.forEach(s=>breakdown.push(`${s.name}: ${s.mark}% → ${s.pts} pts${isLO(s)?' (LO, capped)':''}`));
+    score = adjusted.reduce((a,s)=>a+s.pts,0); max=56;
+  } else if(type==="percentAgg"){
+    const lolt = nonLO.find(isEnglish) || nonLO[0];
+    const rest = nonLO.filter(s=>s!==lolt).sort((a,b)=>b.mark-a.mark).slice(0,5);
+    const all = [lolt, ...rest].filter(Boolean);
+    all.forEach(s=>breakdown.push(`${s.name}: ${s.mark}%`));
+    score = Math.round((all.reduce((a,s)=>a+s.mark,0)/all.length)*10)/10; max=100;
+  } else if(type==="percentSum600"){
+    const ranked = nonLO.sort((a,b)=>b.mark-a.mark).slice(0,6);
+    ranked.forEach(s=>breakdown.push(`${s.name}: ${s.mark}%`));
+    score = ranked.reduce((a,s)=>a+s.mark,0); max=600;
+  } else if(type==="rhodes"){
+    const lo = subjects.find(isLO);
+    const ranked = nonLO.map(s=>({...s, pts: s.mark<40?0:Math.round((s.mark/10)*10)/10})).sort((a,b)=>b.pts-a.pts).slice(0,6);
+    ranked.forEach(s=>breakdown.push(`${s.name}: ${s.mark}% → ${s.pts} pts`));
+    score = ranked.reduce((a,s)=>a+s.pts,0); max=60;
+    if(lo && lo.mark<50) breakdown.push(`Life Orientation is ${lo.mark}% — Rhodes requires 50%+ in LO separately.`);
+  }
+  return {score, max, breakdown};
+}
+
+function recommendation(ratio){
+  if(ratio>=0.83) return "This is a strong score — you're likely competitive for most programmes, including higher-demand fields like engineering, medicine and law (which also set their own subject requirements).";
+  if(ratio>=0.71) return "This is a good score — it should open up many Bachelor's degree programmes. Double-check subject-specific requirements (e.g. Maths/Physical Sciences minimums) for your exact course.";
+  if(ratio>=0.57) return "This is a moderate score — some Bachelor's programmes may be out of reach, but Diplomas, Extended/Augmented programmes, and less competitive degrees are realistic options.";
+  return "This score likely limits Bachelor's degree options — Higher Certificates, Diplomas, TVET college programmes, or an extended/foundation year are worth exploring as solid routes in.";
+}
+
+const FIELD_TIER = {
+  "Health Sciences":"top", "Engineering":"top",
+  "Law":"upper", "Commerce":"upper", "Built Environment":"upper",
+  "IT & Computer Science":"mid", "Natural Sciences":"mid", "Agriculture":"mid",
+  "Humanities":"broad", "Education":"broad", "Arts & Design":"broad"
+};
+function reachableTiers(ratio){
+  if(ratio>=0.83) return ["top","upper","mid","broad"];
+  if(ratio>=0.71) return ["upper","mid","broad"];
+  if(ratio>=0.57) return ["mid","broad"];
+  return ["broad"];
+}
+function fieldFitHtml(uni, ratio){
+  const reach = reachableTiers(ratio);
+  const within = uni.fields.filter(f=>reach.includes(FIELD_TIER[f]||"broad"));
+  const stretch = uni.fields.filter(f=>!within.includes(f));
+  let html = `<div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.15);">
+    <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:8px;">Fields likely within reach at ${uni.label.split('(')[0].trim()}</div>
+    <div style="font-size:13.5px;line-height:1.8;">${within.length ? within.join(' · ') : 'Likely limited at this score — diploma/certificate routes are worth checking.'}</div>`;
+  if(stretch.length){
+    html += `<div style="font-size:12px;opacity:0.6;margin-top:10px;">Typically more competitive here: ${stretch.join(' · ')}</div>`;
+  }
+  html += `<div style="font-size:12px;opacity:0.6;margin-top:10px;">This is a general guide, not exact cutoffs — specific programmes (e.g. Medicine, Actuarial Science) set their own, often higher, requirements. <a href="${uni.url}" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Check exact requirements on ${uni.label.split('(')[0].trim()}'s site →</a></div></div>`;
+  return html;
+}
+
+document.getElementById('aps-calculate').onclick = ()=>{
+  const uniId = document.getElementById('aps-uni-select').value;
+  const uni = APS_UNIS.find(u=>u.id===uniId);
+  if(!uni) return;
+  const rows = [...document.querySelectorAll('#aps-subject-rows .subject-row')];
+  const subjects = rows.map(r=>({
+    name: r.querySelector('.subj-select').value,
+    mark: parseFloat(r.querySelector('.subj-mark').value)
+  })).filter(s=>!isNaN(s.mark) && s.mark>=0 && s.mark<=100);
+
+  if(subjects.length<6){
+    alert('Please enter marks for at least 6 subjects.');
+    return;
+  }
+  const {score, max, breakdown} = calcAPS(uni.type, subjects);
+  const ratio = score/max;
+  const resultEl = document.getElementById('aps-result');
+  resultEl.style.display = 'block';
+  resultEl.innerHTML = `
+    <div class="estimate-flag">Estimate — confirm on ${uni.label.split('(')[0].trim()}'s official calculator</div>
+    <div class="score">${score} <span>/ ${max} — ${uni.label}</span></div>
+    <div class="breakdown">${breakdown.join('<br>')}</div>
+    <div class="reco">${recommendation(ratio)}</div>
+    ${fieldFitHtml(uni, ratio)}
+  `;
+  resultEl.scrollIntoView({behavior:'smooth', block:'center'});
+};
+
+/* ---------- Helpers ---------- */
+function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
+function fmtTime(ts){ if(!ts) return ''; const d = ts.toDate ? ts.toDate() : new Date(ts); return d.toLocaleDateString('en-ZA',{month:'short',day:'numeric'})+' '+d.toLocaleTimeString('en-ZA',{hour:'2-digit',minute:'2-digit'}); }
+function escapeHtml(s){ const d=document.createElement('div'); d.innerText=s; return d.innerHTML; }
+async function ensureVisitorAuth(){
+  if(visitorUid) return visitorUid;
+  await new Promise(res=>{ const unsub = auth.onAuthStateChanged(u=>{ if(u){ unsub(); res(); } }); });
+  return visitorUid;
+}
+
+/* ---------- Chat widget (visitor side) ---------- */
+let chatId = null;
+let chatUnsub = null;
+
+document.getElementById('chat-toggle').onclick = ()=>{
+  document.getElementById('chat-panel').classList.toggle('open');
+};
+document.getElementById('chat-close').onclick = ()=>{
+  document.getElementById('chat-panel').classList.remove('open');
+};
+
+document.getElementById('chat-start').onclick = async ()=>{
+  const name = document.getElementById('chat-name').value.trim();
+  const phone = document.getElementById('chat-phone').value.trim();
+  if(!name || !phone){ alert('Please add your name and a way to reach you.'); return; }
+  await ensureVisitorAuth();
+  chatId = slug(name+'-'+phone);
+  document.getElementById('chat-setup').style.display='none';
+  document.getElementById('chat-live').style.display='flex';
+
+  try{
+    // Merge-set works whether this chat exists yet or not — Firestore evaluates
+    // it as a "create" for a brand-new doc, or "update" for a returning visitor,
+    // so we never need to read the doc first (which our rules correctly refuse
+    // to allow before we can prove it's ours).
+    const chatRef = db.collection('chats').doc(chatId);
+    await chatRef.set({
+      name, phone, visitorUid,
+      lastTs: firebase.firestore.FieldValue.serverTimestamp()
+    }, {merge:true});
+    listenToChat(chatId);
+  }catch(err){
+    console.error('Could not start chat:', err);
+    document.getElementById('chat-body').innerHTML = '<div class="chat-empty">Something went wrong starting the chat — please try again in a moment.</div>';
+  }
+};
+
+function listenToChat(id){
+  if(chatUnsub) chatUnsub();
+  chatUnsub = db.collection('chats').doc(id).collection('messages').orderBy('ts')
+    .onSnapshot(qs=>{
+      const messages = qs.docs.map(d=>d.data());
+      renderChat(messages);
+    }, err=>console.error('Chat listen error:', err));
+}
+
+function renderChat(messages){
+  const body = document.getElementById('chat-body');
+  if(!messages.length){ body.innerHTML = '<div class="chat-empty">Say hi 👋 — messages here are saved so I can reply when I\'m free.</div>'; return; }
+  body.innerHTML = messages.map(m=>`
+    <div class="msg ${m.sender}">
+      ${escapeHtml(m.text)}
+      <span class="meta">${m.sender==='boitumelo'?'Boitumelo · ':''}${fmtTime(m.ts)}</span>
+    </div>`).join('');
+  body.scrollTop = body.scrollHeight;
+}
+
+async function sendChatMessage(){
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if(!text || !chatId) return;
+  input.value='';
+  try{
+    const chatRef = db.collection('chats').doc(chatId);
+    await chatRef.collection('messages').add({sender:'visitor', text, ts: firebase.firestore.FieldValue.serverTimestamp()});
+    await chatRef.set({lastMessage:text, lastTs: firebase.firestore.FieldValue.serverTimestamp()}, {merge:true});
+  }catch(err){
+    console.error('Could not send message:', err);
+    input.value = text; // give the message back so it isn't lost
+    alert("That message didn't send — please try again.");
+  }
+}
+document.getElementById('chat-send').onclick = sendChatMessage;
+document.getElementById('chat-input').addEventListener('keydown', e=>{ if(e.key==='Enter') sendChatMessage(); });
+
+/* ---------- Admin panel ---------- */
+document.getElementById('admin-open').onclick = ()=> document.getElementById('admin-panel').classList.add('open');
+document.getElementById('admin-close').onclick = ()=> document.getElementById('admin-panel').classList.remove('open');
+
+document.getElementById('admin-login').onclick = async ()=>{
+  const email = document.getElementById('admin-email').value.trim();
+  const pass = document.getElementById('admin-pass').value;
+  const msgEl = document.getElementById('admin-gate-msg');
+  msgEl.textContent = '';
+  try{
+    const cred = await auth.signInWithEmailAndPassword(email, pass);
+    if(cred.user.uid !== ADMIN_UID){
+      msgEl.textContent = 'This account is not authorized as admin.';
+      await auth.signOut();
+      await auth.signInAnonymously();
+      return;
+    }
+    document.getElementById('admin-gate').style.display='none';
+    document.getElementById('admin-content').style.display='block';
+    loadAdminChats();
+  }catch(err){
+    msgEl.textContent = err.message.replace('Firebase: ','');
+  }
+};
+
+document.querySelectorAll('.admin-tab').forEach(tab=>{
+  tab.onclick = ()=>{
+    document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const which = tab.dataset.tab;
+    document.getElementById('admin-chats').style.display = which==='chats' ? 'block':'none';
+    document.getElementById('admin-requests').style.display = which==='requests' ? 'block':'none';
+    if(which==='requests') loadAdminRequests();
+    else loadAdminChats();
+  };
+});
+
+let adminChatUnsub = null;
+
+async function loadAdminChats(){
+  if(adminChatUnsub){ adminChatUnsub(); adminChatUnsub = null; }
+  const container = document.getElementById('admin-chats');
+  const qs = await db.collection('chats').orderBy('lastTs','desc').get();
+  if(qs.empty){ container.innerHTML = '<p style="opacity:0.6;">No conversations yet.</p>'; return; }
+  container.innerHTML = qs.docs.map(d=>{
+    const c = d.data();
+    return `<div class="admin-list-item" data-id="${d.id}">
+      <div class="top"><span>${escapeHtml(c.name)} · ${escapeHtml(c.phone||'')}</span><span>${fmtTime(c.lastTs)}</span></div>
+      <div class="preview">${escapeHtml(c.lastMessage||'(no messages yet)')}</div>
+    </div>`;
+  }).join('');
+  container.querySelectorAll('.admin-list-item').forEach(item=>{
+    item.onclick = ()=> openAdminChat(item.dataset.id);
+  });
+}
+
+async function openAdminChat(id){
+  if(adminChatUnsub){ adminChatUnsub(); adminChatUnsub = null; }
+  const chatSnap = await db.collection('chats').doc(id).get();
+  const convo = chatSnap.data();
+  const container = document.getElementById('admin-chats');
+  container.innerHTML = `
+    <button class="admin-tab" id="back-to-list" style="margin-bottom:16px;">← Back</button>
+    <div class="admin-chat-view">
+      <div style="font-weight:700;margin-bottom:10px;">${escapeHtml(convo.name)} · ${escapeHtml(convo.phone||'')}</div>
+      <div class="chat-body" id="admin-chat-body"></div>
+      <div class="admin-reply-row">
+        <input type="text" id="admin-reply-input" placeholder="Reply as Boitumelo…">
+        <button id="admin-reply-send">Send</button>
+      </div>
+    </div>`;
+  document.getElementById('back-to-list').onclick = ()=>{ if(adminChatUnsub) adminChatUnsub(); loadAdminChats(); };
+
+  adminChatUnsub = db.collection('chats').doc(id).collection('messages').orderBy('ts')
+    .onSnapshot(qs=>{
+      const body = document.getElementById('admin-chat-body');
+      if(!body) return;
+      const messages = qs.docs.map(d=>d.data());
+      body.innerHTML = messages.map(m=>`
+        <div class="msg ${m.sender}">${escapeHtml(m.text)}<span class="meta">${m.sender==='boitumelo'?'You · ':''}${fmtTime(m.ts)}</span></div>`).join('');
+      body.scrollTop = body.scrollHeight;
+    });
+
+  document.getElementById('admin-reply-send').onclick = async ()=>{
+    const input = document.getElementById('admin-reply-input');
+    const text = input.value.trim();
+    if(!text) return;
+    input.value='';
+    try{
+      const chatRef = db.collection('chats').doc(id);
+      await chatRef.collection('messages').add({sender:'boitumelo', text, ts: firebase.firestore.FieldValue.serverTimestamp()});
+      await chatRef.set({lastMessage:text, lastTs: firebase.firestore.FieldValue.serverTimestamp()}, {merge:true});
+    }catch(err){
+      console.error('Could not send reply:', err);
+      input.value = text;
+      alert("That reply didn't send — please try again.");
+    }
+  };
+}
+
+async function loadAdminRequests(){
+  const container = document.getElementById('admin-requests');
+  const qs = await db.collection('applications').orderBy('ts','desc').get();
+  if(qs.empty){ container.innerHTML = '<p style="opacity:0.6;">No requests yet.</p>'; return; }
+  container.innerHTML = qs.docs.map(d=>{
+    const r = d.data();
+    return `<div class="admin-list-item" style="cursor:default;">
+      <div class="top"><span>${escapeHtml(r.name)}</span><span>${fmtTime(r.ts)}</span></div>
+      <div class="app-detail">
+        <b>Contact:</b> ${escapeHtml(r.contact)}<br>
+        ${r.courses ? `<b>Courses:</b> ${escapeHtml(r.courses)}<br>` : ''}
+        ${r.notes ? `<b>Notes:</b> ${escapeHtml(r.notes)}` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+</script>
+</body>
+</html>
