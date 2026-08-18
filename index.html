@@ -543,18 +543,18 @@ auth.signInAnonymously().catch(e=>console.error('Anonymous sign-in failed — ch
 /* ---------- University directory (Route 01) ---------- */
 const universities = [
   {name:"CAO (KZN Universities)", tag:"UKZN, DUT, MUT, UNIZULU — one form, one fee", url:"https://www.cao.ac.za"},
-  {name:"University of Cape Town", tag:"Applications via UCT online portal", url:"https://www.uct.ac.za/apply"},
-  {name:"University of the Witwatersrand", tag:"Wits Johannesburg online application", url:"https://www.wits.ac.za/study-at-wits/undergraduate-study/how-to-apply/"},
+  {name:"University of Cape Town", tag:"Applications via UCT online portal", url:"https://publicaccess.uct.ac.za/psc/public/EMPLOYEE/SA/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL?LP=UCT_ONLINE_APP_PUBLIC&"},
+  {name:"University of the Witwatersrand", tag:"Wits Johannesburg online application", url:"https://www.wits.ac.za/study-at-wits/"},
   {name:"Stellenbosch University", tag:"SU online application system", url:"https://www.sun.ac.za/english/apply"},
   {name:"University of Pretoria", tag:"UP online application", url:"https://www.up.ac.za/apply"},
-  {name:"University of Johannesburg", tag:"UJ Gauteng, multiple campuses", url:"https://www.uj.ac.za/apply/"},
-  {name:"University of the Free State", tag:"UFS — free application for SA students", url:"https://www.ufs.ac.za/apply"},
+  {name:"University of Johannesburg", tag:"UJ Gauteng, multiple campuses", url:"https://www.uj.ac.za/admissions-aid/"},
+  {name:"University of the Free State", tag:"UFS — free application for SA students", url:"https://apply.ufs.ac.za/Application/Start"},
   {name:"University of the Western Cape", tag:"UWC — no application fee for SA students", url:"https://www.uwc.ac.za/study/applications"},
-  {name:"Nelson Mandela University", tag:"NMU, Gqeberha (Eastern Cape)", url:"https://www.mandela.ac.za/Study-at-Mandela/Applications"},
-  {name:"Tshwane University of Technology", tag:"TUT — diplomas & applied degrees", url:"https://www.tut.ac.za/applications"},
+  {name:"Nelson Mandela University", tag:"NMU, Gqeberha (Eastern Cape)", url:"https://www.mandela.ac.za/Study-at-Mandela/Application/Apply-Undergraduate"},
+  {name:"Tshwane University of Technology", tag:"TUT — diplomas & applied degrees", url:"https://applications-prod.tut.ac.za/"},
   {name:"Cape Peninsula University of Technology", tag:"CPUT — Engineering, Business, Health", url:"https://www.cput.ac.za/study/apply"},
-  {name:"North-West University", tag:"NWU — Potchefstroom, Mahikeng, Vaal", url:"https://www.nwu.ac.za/how-apply"},
-  {name:"Rhodes University", tag:"Small, research-focused, Makhanda", url:"https://www.ru.ac.za/apply/"},
+  {name:"North-West University", tag:"NWU — Potchefstroom, Mahikeng, Vaal", url:"https://studies.nwu.ac.za/studies/apply"},
+  {name:"Rhodes University", tag:"Small, research-focused, Makhanda", url:"https://ross.ru.ac.za/ugadmissions"},
   {name:"University of South Africa (UNISA)", tag:"Distance learning, later closing dates", url:"https://www.unisa.ac.za/sites/corporate/default/Apply-for-admission"},
   {name:"University of KwaZulu-Natal", tag:"UKZN — applies through CAO", url:"https://www.ukzn.ac.za"},
 ];
@@ -576,11 +576,11 @@ const privateInstitutions = [
   {name:"Lyceum College", tag:"Distance learning, business & management", url:"https://www.lyceum.co.za"},
   {name:"AFDA", tag:"Film, TV & performance, Johannesburg/Cape Town/Durban", url:"https://www.afda.co.za"},
   {name:"Regenesys Business School", tag:"Business & leadership qualifications", url:"https://www.regenesys.net"},
-  {name:"CTU Training Solutions", tag:"IT, business, engineering technology", url:"https://www.ctutraining.co.za"},
+  {name:"CTU Training Solutions", tag:"IT, business, engineering technology", url:"https://ctutraining.ac.za/"},
   {name:"Regent Business School", tag:"Business, Durban-based, multiple campuses", url:"https://www.regent.ac.za"},
   {name:"Richfield", tag:"IT, business & health sciences", url:"https://www.richfield.ac.za"},
   {name:"Akademia", tag:"Afrikaans-medium, Centurion campus", url:"https://akademia.ac.za"},
-  {name:"AAA School of Advertising", tag:"Advertising, marketing & design, Johannesburg/Cape Town/Durban", url:"https://aaaschool.co.za"},
+  {name:"AAA School of Advertising", tag:"Advertising, marketing & design, Johannesburg/Cape Town/Durban", url:"https://aaaschool.ac.za/"},
 ];
 const privGrid = document.getElementById('private-grid');
 privateInstitutions.forEach(u=>{
@@ -604,8 +604,8 @@ const SUBJECTS = [
 ];
 
 const APS_UNIS = [
-  {id:"up", label:"University of Pretoria (UP)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.up.ac.za/apply", fields:["Commerce","Education","Engineering","IT & Computer Science","Health Sciences","Humanities","Law","Natural Sciences","Agriculture","Built Environment"], prospectusUrl:"https://www.up.ac.za/students/faculty-brochures-2027", prospectusYear:2027},
-  {id:"uj", label:"University of Johannesburg (UJ)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.uj.ac.za/apply/", fields:["Arts & Design","Education","Engineering","Built Environment","Health Sciences","Humanities","Law","Commerce","Natural Sciences","IT & Computer Science"], prospectusUrl:"https://www.uj.ac.za/pdf-document/2026-uj-undergraduate-prospectus/", prospectusYear:2027},
+  {id:"up", label:"University of Pretoria (UP)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.up.ac.za/apply", fields:["Commerce","Education","Engineering","IT & Computer Science","Health Sciences","Humanities","Law","Natural Sciences","Agriculture","Built Environment"], prospectusUrl:"https://drupalwebprod-files.up.ac.za/Public/2026-01/UP_UG%20Prospectus%202027_NSC-IEB_DevV5_web_0.pdf?VersionId=mFTqP2HthIDn48ISjWf4b4g6CtdE6beU, prospectusYear:2027},
+  {id:"uj", label:"University of Johannesburg (UJ)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.uj.ac.za/apply/", fields:["Arts & Design","Education","Engineering","Built Environment","Health Sciences","Humanities","Law","Commerce","Natural Sciences","IT & Computer Science"], prospectusUrl:"https://www.uj.ac.za/wp-content/uploads/2026/07/uj_undergrad_prospectus2027_online_25jun2026.pdf, prospectusYear:2027},
   {id:"dut", label:"Durban University of Technology (DUT)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.cao.ac.za", fields:["Natural Sciences","Arts & Design","Commerce","IT & Computer Science","Engineering","Built Environment","Health Sciences"]},
   {id:"ufs", label:"University of the Free State (UFS)", type:"standard42", note:"Standard scale — best 6 subjects (Life Orientation excluded), 1–7 points each, out of 42.", url:"https://www.ufs.ac.za/apply", fields:["Commerce","Education","Health Sciences","Humanities","Law","Natural Sciences","Agriculture"], prospectusUrl:"https://www.ufs.ac.za/docs/librariesprovider44/prospectus/ug-prospectus-2027.pdf", prospectusYear:2027},
   {id:"tut", label:"Tshwane University of Technology (TUT)", type:"tut42", note:"Best 6 subjects, 1–7 points, but any subject below 30% is dropped entirely rather than scored — out of 42.", url:"https://www.tut.ac.za/applications", fields:["Engineering","Built Environment","Humanities","IT & Computer Science","Commerce","Natural Sciences"]},
